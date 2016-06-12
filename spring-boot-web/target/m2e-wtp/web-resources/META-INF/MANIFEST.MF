@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Built-By: CN40312
-Build-Jdk: 1.8.0_65
-Implementation-Title: spring-boot-web
-Implementation-Version: 0.0.1-SNAPSHOT
-Implementation-Vendor-Id: spring-boot-example
-Implementation-Vendor: Pivotal Software, Inc.
-Created-By: Maven Integration for Eclipse
-
