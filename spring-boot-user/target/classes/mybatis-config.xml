@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<package name="com.github.shanks.spring.boot.domain.user" />
+	</typeAliases>
+	<typeHandlers>
+		<package name="com.github.shanks.spring.boot.common.handler"/>
+	</typeHandlers>
+	<mappers>
+		<mapper resource="sqlmap/UserRepostory.xml" />
+	</mappers>
+</configuration>
