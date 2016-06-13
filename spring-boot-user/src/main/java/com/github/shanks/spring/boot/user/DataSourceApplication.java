@@ -16,7 +16,7 @@ public class DataSourceApplication {
 	@Bean
 	@ConfigurationProperties(prefix = "spring.datasource")
 	/**
-	 * use HikairDataSource
+	 * use HikariDataSource
 	 * @return
 	 */
 	DataSource dataSource() {
