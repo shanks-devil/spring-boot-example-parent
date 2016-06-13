@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.github.shanks.spring.multi.datasource.MultiDatabaseConfiguration.First;
 import com.github.shanks.spring.multi.datasource.MultiDatabaseConfiguration.Second;
+import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
 @EnableTransactionManagement
@@ -62,8 +63,9 @@ class FirstDataSourceConfiguration {
 
 	@Bean
 	@ConfigurationProperties(prefix = "spring.datasource")
+	// user HikariDatasource and HikairPool
 	public DataSource firstDataSource() {
-		return DataSourceBuilder.create().build();
+		return new HikariDataSource();
 	}
 }
 
@@ -84,6 +86,7 @@ class SecondDataSourceConfiguration {
 	
 	@Bean
 	@ConfigurationProperties(prefix = "spring.second.datasource")
+	// user TomcatDataSource and TomcatPool
 	public DataSource secondDataSource() {
 		return DataSourceBuilder.create().build();
 	}
