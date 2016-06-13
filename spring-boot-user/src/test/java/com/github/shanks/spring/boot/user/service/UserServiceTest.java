@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
 import com.github.shanks.spring.boot.domain.user.User;
 import com.github.shanks.spring.boot.user.Application;
 
@@ -26,7 +25,7 @@ public class UserServiceTest {
 	@Test
 	public void create() {
 		User user = new User();
-		user.setUserName("test");
+		user.setUserName("test-@Transactional001");
 		userService.create(user);
 	}
 	
