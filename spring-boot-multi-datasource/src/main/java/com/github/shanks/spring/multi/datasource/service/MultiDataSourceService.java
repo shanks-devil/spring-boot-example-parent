@@ -28,14 +28,8 @@ public class MultiDataSourceService {
 	}
 	
 	@Transactional(rollbackFor = Exception.class,  value = "fristDataSourceTransactionManager")
-	public void createUserFromFirst(int e) {
-		User user = new User();
-		user.setUserName("@Transactional888");
+	public void createUserFromFirst(User user) {
 		firstRepository.create(user);
-		if (e == 1) {
-			throw new RuntimeException("@Transactional888");
-		}
 	}
-	
 	
 }

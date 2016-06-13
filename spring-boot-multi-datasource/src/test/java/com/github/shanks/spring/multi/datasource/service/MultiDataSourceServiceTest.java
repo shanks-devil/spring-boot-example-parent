@@ -7,6 +7,7 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.github.shanks.spring.boot.domain.user.User;
 import com.github.shanks.spring.multi.datasource.Application;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -29,7 +30,9 @@ public class MultiDataSourceServiceTest {
 	
 	@Test
 	public void create() {
-		multiDataSourceService.createUserFromFirst(1);
+		User user = new User();
+		user.setUserName("test");
+		multiDataSourceService.createUserFromFirst(user);
 	}
 	
 }
