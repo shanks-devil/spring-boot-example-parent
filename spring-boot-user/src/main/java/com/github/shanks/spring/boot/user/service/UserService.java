@@ -20,9 +20,9 @@ public class UserService {
 	}
 	
 	@Transactional(rollbackFor = Exception.class)
-	public User create(User userModel) {
-		userRepostory.create(userModel);
-		return userModel;
+	public User create(User user) {
+		userRepostory.create(user);
+		return user;
 	}
 	
 	public User selectUser(Long userId) {
@@ -35,8 +35,8 @@ public class UserService {
 	}
 	
 	@Transactional(rollbackFor = Exception.class)
-	public void update(User userModel) {
-		userRepostory.update(userModel);
+	public void update(User user) {
+		userRepostory.update(user);
 	}
 
 }

@@ -7,6 +7,7 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.github.shanks.spring.boot.domain.user.User;
 import com.github.shanks.spring.boot.user.Application;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -20,6 +21,13 @@ public class UserServiceTest {
 	@Test
 	public void selectUser() {
 		System.out.println(userService.selectUserList());
+	}
+	
+	@Test
+	public void create() {
+		User user = new User();
+		user.setUserName("test");
+		userService.create(user);
 	}
 	
 }

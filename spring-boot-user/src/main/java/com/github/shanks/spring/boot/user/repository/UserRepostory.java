@@ -11,11 +11,11 @@ public interface UserRepostory {
 
 	List<User> selectUserList();
 	
-	void create(User userModel);
+	void create(User user);
 	
 	User selectUser(Long userId);
 
 	void delete(long userId);
 	
-	void update(User userModel);
+	void update(User user);
 }
