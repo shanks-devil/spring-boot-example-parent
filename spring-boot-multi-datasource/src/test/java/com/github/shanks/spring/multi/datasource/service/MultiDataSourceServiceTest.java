@@ -12,7 +12,7 @@ import com.github.shanks.spring.multi.datasource.Application;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(Application.class)
-@ActiveProfiles(value = "dev")
+@ActiveProfiles(value = "jtest")
 public class MultiDataSourceServiceTest {
 
 	@Autowired
@@ -20,7 +20,7 @@ public class MultiDataSourceServiceTest {
 	
 	@Test
 	public void selectUserFromFirst() {
-		System.out.println(multiDataSourceService.selectUserFromFirst().get(multiDataSourceService.selectUserFromFirst().size()-1));
+		System.out.println(multiDataSourceService.selectUserFromFirst());
 	}
 	
 	@Test
